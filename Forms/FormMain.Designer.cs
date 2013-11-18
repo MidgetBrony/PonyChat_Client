@@ -106,15 +106,16 @@ namespace IceChat
             this.splitterBottom = new System.Windows.Forms.Splitter();
             this.nickListTab = new System.Windows.Forms.TabPage();
             this.nickPanel = new System.Windows.Forms.Panel();
+            this.nickList = new IceChat.NickList();
             this.serverListTab = new System.Windows.Forms.TabPage();
             this.serverPanel = new System.Windows.Forms.Panel();
+            this.serverTree = new IceChat.ServerTree();
             this.mainTabControl = new IceChat.IceTabControl();
             this.panelDockRight = new IceChat.IceDockPanel();
             this.panelDockLeft = new IceChat.IceDockPanel();
             this.inputPanel = new IceChat.InputPanel();
             this.mainChannelBar = new IceChat.ChannelBar();
-            this.nickList = new IceChat.NickList();
-            this.serverTree = new IceChat.ServerTree();
+            this.editServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMainStrip.SuspendLayout();
             this.contextMenuNotify.SuspendLayout();
             this.contextMenuToolBar.SuspendLayout();
@@ -216,7 +217,8 @@ namespace IceChat
             this.iceChatColorsToolStripMenuItem,
             this.iceChatEditorToolStripMenuItem,
             this.muteAllSoundsToolStripMenuItem,
-            this.pluginsToolStripMenuItem});
+            this.pluginsToolStripMenuItem,
+            this.editServerToolStripMenuItem});
             this.optionsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuText;
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
@@ -655,6 +657,7 @@ namespace IceChat
             // 
             this.statusStripMain.AccessibleDescription = "Main status bar";
             this.statusStripMain.AccessibleRole = System.Windows.Forms.AccessibleRole.StatusBar;
+            this.statusStripMain.CanOverflow = true;
             this.statusStripMain.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatus});
@@ -665,7 +668,6 @@ namespace IceChat
             this.statusStripMain.Size = new System.Drawing.Size(924, 22);
             this.statusStripMain.SizingGrip = false;
             this.statusStripMain.TabIndex = 18;
-            this.statusStripMain.CanOverflow = true;
             // 
             // splitterBottom
             // 
@@ -696,6 +698,19 @@ namespace IceChat
             this.nickPanel.Size = new System.Drawing.Size(192, 454);
             this.nickPanel.TabIndex = 0;
             // 
+            // nickList
+            // 
+            this.nickList.AccessibleDescription = "List of Nick Names";
+            this.nickList.AccessibleRole = System.Windows.Forms.AccessibleRole.Pane;
+            this.nickList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nickList.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nickList.Header = "";
+            this.nickList.Location = new System.Drawing.Point(0, 0);
+            this.nickList.Margin = new System.Windows.Forms.Padding(4);
+            this.nickList.Name = "nickList";
+            this.nickList.Size = new System.Drawing.Size(192, 454);
+            this.nickList.TabIndex = 0;
+            // 
             // serverListTab
             // 
             this.serverListTab.Controls.Add(this.serverPanel);
@@ -713,6 +728,18 @@ namespace IceChat
             this.serverPanel.Name = "serverPanel";
             this.serverPanel.Size = new System.Drawing.Size(172, 454);
             this.serverPanel.TabIndex = 0;
+            // 
+            // serverTree
+            // 
+            this.serverTree.AccessibleDescription = "List of servers and channels associated with them once connected";
+            this.serverTree.AccessibleRole = System.Windows.Forms.AccessibleRole.Pane;
+            this.serverTree.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.serverTree.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.serverTree.Location = new System.Drawing.Point(0, 0);
+            this.serverTree.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.serverTree.Name = "serverTree";
+            this.serverTree.Size = new System.Drawing.Size(172, 454);
+            this.serverTree.TabIndex = 0;
             // 
             // mainTabControl
             // 
@@ -762,30 +789,12 @@ namespace IceChat
             this.mainChannelBar.Size = new System.Drawing.Size(924, 31);
             this.mainChannelBar.TabIndex = 24;
             // 
-            // nickList
+            // editServerToolStripMenuItem
             // 
-            this.nickList.AccessibleDescription = "List of Nick Names";
-            this.nickList.AccessibleRole = System.Windows.Forms.AccessibleRole.Pane;
-            this.nickList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nickList.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nickList.Header = "";
-            this.nickList.Location = new System.Drawing.Point(0, 0);
-            this.nickList.Margin = new System.Windows.Forms.Padding(4);
-            this.nickList.Name = "nickList";
-            this.nickList.Size = new System.Drawing.Size(192, 454);
-            this.nickList.TabIndex = 0;
-            // 
-            // serverTree
-            // 
-            this.serverTree.AccessibleDescription = "List of servers and channels associated with them once connected";
-            this.serverTree.AccessibleRole = System.Windows.Forms.AccessibleRole.Pane;
-            this.serverTree.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.serverTree.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serverTree.Location = new System.Drawing.Point(0, 0);
-            this.serverTree.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.serverTree.Name = "serverTree";
-            this.serverTree.Size = new System.Drawing.Size(172, 454);
-            this.serverTree.TabIndex = 0;
+            this.editServerToolStripMenuItem.Name = "editServerToolStripMenuItem";
+            this.editServerToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
+            this.editServerToolStripMenuItem.Text = "Edit Server";
+            this.editServerToolStripMenuItem.Click += new System.EventHandler(this.editServerToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -885,6 +894,7 @@ namespace IceChat
         private ChannelBar mainChannelBar;
         internal ToolStripMenuItem fontSettingsToolStripMenuItem;
         private ToolStripMenuItem toolStripUpdate;
+        private ToolStripMenuItem editServerToolStripMenuItem;
 
     }
 
