@@ -28,6 +28,7 @@ using System.Collections;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace IceChat
 {

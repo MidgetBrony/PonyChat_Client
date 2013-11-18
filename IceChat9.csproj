@@ -11,7 +11,8 @@
     <RootNamespace>IceChat</RootNamespace>
     <AssemblyName>IceChat2009</AssemblyName>
     <StartupObject>IceChat.Program</StartupObject>
-    <ApplicationIcon>icechat9.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -183,6 +184,12 @@
     <Compile Include="Forms\FormPluginInfo.Designer.cs">
       <DependentUpon>FormPluginInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PonyChatEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PonyChatEdit.Designer.cs">
+      <DependentUpon>PonyChatEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormServerEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,6 +321,9 @@
     <EmbeddedResource Include="Forms\FormPluginInfo.resx">
       <DependentUpon>FormPluginInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PonyChatEdit.resx">
+      <DependentUpon>PonyChatEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormUserInfo.resx">
       <DependentUpon>FormUserInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -430,8 +440,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icechat9.ico">
-    </Content>
     <EmbeddedResource Include="Forms\FormList.resx">
       <DependentUpon>FormList.cs</DependentUpon>
     </EmbeddedResource>
@@ -451,6 +459,8 @@
     <EmbeddedResource Include="Icons\mute.png" />
     <None Include="Icons\restore.png" />
     <None Include="Icons\maximize.png" />
+    <EmbeddedResource Include="Icons\PonyChat.ico" />
+    <Content Include="Ponychat.ico" />
     <Content Include="ToDo.txt" />
     <EmbeddedResource Include="Icons\update-menu.png" />
     <EmbeddedResource Include="Icons\update.png" />

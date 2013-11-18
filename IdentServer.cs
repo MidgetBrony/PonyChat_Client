@@ -1,8 +1,12 @@
 ﻿/******************************************************************************\
  * IceChat 9 Internet Relay Chat Client
- *
+ * PonyChat IRC Client
+ * 
  * Copyright (C) 2013 Paul Vanderzee <snerf@icechat.net>
  *                                    <www.icechat.net> 
+ *                                    
+ * Copyright (C) 2013 MidgetBrony <MidgetBrony@ponychat.net>
+ *                              
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2, or (at your option)
@@ -17,7 +21,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  *
- * Please consult the LICENSE.txt file included with this project for
+ * Please consult the LICENSE.md file included with this project for
  * more details
  *
 \******************************************************************************/
